@@ -1,0 +1,17 @@
+.admin {
+    display: flex;
+    height: 95vh;
+}
+
+.left {
+    flex: 0 0 22.5%;
+}
+
+.right {
+    flex: 1;
+}
+
+.admin-options div {
+    width: 100%;
+    cursor: pointer;
+}
