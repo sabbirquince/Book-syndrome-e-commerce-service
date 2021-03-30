@@ -25,6 +25,10 @@ function App() {
             <Home />
           </Route>
 
+          <Route path="/home">
+            <Home />
+          </Route>
+
           <Route path="/login">
             <Login />
           </Route>

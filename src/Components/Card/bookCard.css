@@ -1,0 +1,15 @@
+.book-card {
+    border: none;
+}
+
+.price {
+    font-size: 1.75rem;
+    font-weight: bolder;
+    padding: 0;
+}
+
+.book-img {
+    height: 16rem;
+    object-fit: contain;
+    padding: 1rem;
+}
