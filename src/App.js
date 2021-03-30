@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -21,5 +21,7 @@ function App() {
     </div>
   );
 }
+
+//git remote add origin https://github.com/Porgramming-Hero-web-course/full-stack-client-sabbirquince.git
 
 export default App;
