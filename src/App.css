@@ -5,11 +5,22 @@
 }
 
 .root {
-  background-color: #eaffd0;
+  background-color: #f4f9f9;
+  font-family: 'Kanit', sans-serif;
 }
 
 a:hover {
   text-decoration: none !important;
+}
+
+.brand {
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.nav-option {
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 a {
@@ -19,4 +30,9 @@ a {
 
 h4 {
   margin-bottom: 0 !important;
+}
+
+.navigation {
+  background-color: #a4ebf3;
+  font-weight: 600;
 }

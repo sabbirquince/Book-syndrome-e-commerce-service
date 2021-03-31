@@ -1,10 +1,11 @@
 .book-card {
     border: none;
+    background-color: #ccf2f4;
 }
 
 .price {
     font-size: 1.75rem;
-    font-weight: bolder;
+    font-weight: 400;
     padding: 0;
 }
 

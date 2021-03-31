@@ -5,7 +5,7 @@
 
 .left {
     flex: 0 0 20%;
-    /* background-color: #eaffd0; */
+    background-color: #393e46;
 }
 
 .left h4 {
@@ -20,7 +20,7 @@
     width: 100%;
     cursor: pointer;
     color: white;
-    font-size: 1.10rem;
+    font-size: 1rem;
 }
 
 .admin-options div:hover {

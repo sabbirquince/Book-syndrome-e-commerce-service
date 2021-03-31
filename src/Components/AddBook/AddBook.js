@@ -43,7 +43,7 @@ const AddBook = () => {
       .then((res) => res.json())
       .then((data) => {
         setBookSave(data);
-        // setTimeout(() => window.location.reload(), 1500);
+        setTimeout(() => setBookSave(false), 7000);
       });
   };
 
@@ -51,48 +51,48 @@ const AddBook = () => {
     <div className="addBook">
       <h1 className="bg-white text-center p-3">Add a book</h1>
 
-      <form
-        className="book-form bg-white shadow-sm"
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <input
-          name="book"
-          placeholder="Book name"
-          ref={register({ required: true })}
-        />
-        {errors.book && <span>This field is required</span>}
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <section className="book-form bg-white shadow-sm">
+          <div className="form-top">
+            <input
+              name="book"
+              placeholder="Book name"
+              ref={register({ required: true })}
+            />
+            {errors.book && <span>This field is required</span>}
 
-        <input
-          name="author"
-          placeholder="Author name"
-          ref={register({ required: true })}
-        />
-        {errors.author && <span>This field is required</span>}
+            <input
+              name="author"
+              placeholder="Author name"
+              ref={register({ required: true })}
+            />
+            {errors.author && <span>This field is required</span>}
+          </div>
 
-        <input
-          name="price"
-          placeholder="Add Price"
-          ref={register({ required: true })}
-        />
-        {errors.price && <span>This field is required</span>}
+          <div className="form-bottom">
+            <input
+              name="price"
+              placeholder="Add Price"
+              ref={register({ required: true })}
+            />
+            {errors.price && <span>This field is required</span>}
 
-        <input type="file" name="image" onChange={handleImgUpload} />
-        {loading && (
-          <p className="text-secondary">Image is being uploaded...</p>
-        )}
+            <input type="file" name="image" onChange={handleImgUpload} />
+          </div>
+
+          {loading && (
+            <p className="text-secondary">Image is being uploaded...</p>
+          )}
+        </section>
 
         {imgURL ? (
-          <input
-            className="btn btn-success py-2"
-            type="submit"
-            value="Save Book"
-          />
+          <input className="save-btn" type="submit" value="Save Book" />
         ) : (
-          <p className="btn-disabled mt-2 text-center">Save Book</p>
+          <p className="btn-disabled text-center">Save Book</p>
         )}
 
         {bookSave && (
-          <p className="text-success">
+          <p className="text-dark text-center">
             Book is saved successfully, try adding another!
           </p>
         )}

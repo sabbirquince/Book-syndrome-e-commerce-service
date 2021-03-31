@@ -11,8 +11,8 @@ const Admin = () => {
 
   return (
     <div className="admin">
-      <section className="left bg-dark text-light">
-        <h4 className="py-3 mb-5">Admin Panel</h4>
+      <section className="left text-light">
+        <h4 className="py-3 mb-3">Admin Panel</h4>
 
         <div className="admin-options">
           <Link to={`${url}/manage`}>

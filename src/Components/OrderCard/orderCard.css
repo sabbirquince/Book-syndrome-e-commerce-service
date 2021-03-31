@@ -1,0 +1,25 @@
+.order-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ccf2f4;
+    border-radius: 5px;
+}
+
+.order-card div {
+    flex: 4;
+}
+
+.order-card div:nth-child(odd) {
+    flex: 1;
+}
+
+.card-last {
+    text-align: end;
+}
+
+.order-img {
+    /* width: 5%; */
+    height: 5rem;
+}

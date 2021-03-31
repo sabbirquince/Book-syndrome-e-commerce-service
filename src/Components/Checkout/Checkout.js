@@ -10,29 +10,35 @@ const Checkout = () => {
   const { bookId } = useParams();
 
   const [specBook, setSpecBook] = useState({});
-  const { book, author, price } = specBook;
+  const { book, author, price, imgURL } = specBook;
 
   useEffect(() => {
-    fetch(`http://localhost:4022/checkout/${bookId}`)
+    fetch(`https://young-lowlands-07161.herokuapp.com/checkout/${bookId}`)
       .then((res) => res.json())
       .then((data) => setSpecBook(data));
   }, [bookId]);
 
   const [loggedIn, setLoggedIn] = useContext(LoginContext);
-  console.log(loggedIn);
+
+  const [uploaded, setUploaded] = useState(false);
 
   const handleCheckout = () => {
     const { email } = loggedIn;
     const date = new Date();
-    const placedOrder = { email, book, author, price, date };
+    const placedOrder = { email, book, author, price, date, imgURL };
 
-    fetch("http://localhost:4022/placedOrder", {
+    fetch("https://young-lowlands-07161.herokuapp.com/placedOrder", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify(placedOrder),
-    });
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setUploaded(data);
+        setTimeout(() => setUploaded(false), 8000);
+      });
   };
 
   return (
@@ -61,6 +67,13 @@ const Checkout = () => {
       </div>
 
       <div className="checkout-btn mt-3">
+        {uploaded && (
+          <p>
+            This order has been added to your orders list. See Orders to see
+            details.
+          </p>
+        )}
+
         <button
           onClick={handleCheckout}
           className="btn shadow btn-dark text-light px-3 py-2"
