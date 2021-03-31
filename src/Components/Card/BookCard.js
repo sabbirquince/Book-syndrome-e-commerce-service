@@ -1,9 +1,10 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./bookCard.css";
 
 const BookCard = (props) => {
-  const { imgURL, book, author, price } = props.book;
+  const { imgURL, book, author, price, _id } = props.book;
 
   return (
     <Card className="bg-light book-card shadow">
@@ -15,8 +16,10 @@ const BookCard = (props) => {
         </Card.Text>
       </Card.Body>
       <Card.Footer className="d-flex justify-content-between">
-        <div className="btn btn-outline-light text-info price">${price}</div>
-        <button className="btn btn-info">Buy Now</button>
+        <div className="btn text-dark price">${price}</div>
+        <Link to={`/checkout/${_id}`}>
+          <button className="btn btn-dark">Buy Now</button>
+        </Link>
       </Card.Footer>
     </Card>
   );

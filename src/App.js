@@ -9,6 +9,7 @@ import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import Orders from "./Components/Orders/Orders";
 import Admin from "./Components/Admin/Admin";
+import Checkout from "./Components/Checkout/Checkout";
 
 export const LoginContext = createContext();
 
@@ -42,7 +43,9 @@ function App() {
               <Admin />
             </PrivateRoute>
 
-            <PrivateRoute path="/checkOut/:bookId"></PrivateRoute>
+            <PrivateRoute path="/checkout/:bookId">
+              <Checkout />
+            </PrivateRoute>
           </Switch>
         </Router>
       </LoginContext.Provider>

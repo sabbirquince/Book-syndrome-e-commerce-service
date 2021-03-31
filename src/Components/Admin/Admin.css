@@ -5,7 +5,7 @@
 
 .left {
     flex: 0 0 20%;
-    background-color: #eaffd0;
+    /* background-color: #eaffd0; */
 }
 
 .left h4 {
@@ -24,5 +24,5 @@
 }
 
 .admin-options div:hover {
-    background-color: rgb(176, 235, 176);
+    background-color: rgba(46, 48, 51, 0.664);
 }

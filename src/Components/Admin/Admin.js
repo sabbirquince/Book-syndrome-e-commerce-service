@@ -11,22 +11,22 @@ const Admin = () => {
 
   return (
     <div className="admin">
-      <section className="left">
+      <section className="left bg-dark text-light">
         <h4 className="py-3 mb-5">Admin Panel</h4>
 
         <div className="admin-options">
           <Link to={`${url}/manage`}>
-            <div className=" text-dark p-3 pl-5">
+            <div className=" p-3 pl-5">
               <FontAwesomeIcon icon={faStream} /> Manage Books
             </div>
           </Link>
           <Link to={`${url}/addBook`}>
-            <div className=" text-dark p-3 pl-5">
+            <div className=" p-3 pl-5">
               <FontAwesomeIcon icon={faPlus} /> Add Book
             </div>
           </Link>
           <Link to={`${url}/editBook`}>
-            <div className=" text-dark p-3 pl-5">
+            <div className=" p-3 pl-5">
               <FontAwesomeIcon icon={faEdit} /> Edit Book
             </div>
           </Link>

@@ -1,0 +1,47 @@
+.checkout {
+    min-height: 90vh;
+}
+
+.checkout h3 {
+    padding: 1.5rem 12.25rem;
+}
+
+.my-checkout-card {
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.my-checkout-card div {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.checkout .c-footer {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.my-checkout-card div h6:first-child {
+    flex: 0 0 45%;
+}
+
+.my-checkout-card div:not(:last-child) {
+    border-bottom: .5px solid rgb(235, 235, 235);
+}
+
+/* .my-checkout-card div:last-child {
+    background-color: #e4fbff;
+} */
+
+.checkout-btn {
+    width: 74%;
+    margin: 0 auto;
+    text-align: end;
+}
+
+/* .checkout-btn button {
+    background-color: #4a47a3;
+} */
