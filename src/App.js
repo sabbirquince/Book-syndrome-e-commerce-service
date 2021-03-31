@@ -13,39 +13,41 @@ import Admin from "./Components/Admin/Admin";
 export const LoginContext = createContext();
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   return (
-    <LoginContext.Provider value={[loggedIn, setLoggedIn]}>
-      <Router>
-        <Navigation />
+    <div className="root">
+      <LoginContext.Provider value={[loggedIn, setLoggedIn]}>
+        <Router>
+          <Navigation />
 
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
 
-          <Route path="/home">
-            <Home />
-          </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
 
-          <Route path="/login">
-            <Login />
-          </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
 
-          <PrivateRoute path="/orders">
-            <Orders />
-          </PrivateRoute>
+            <PrivateRoute path="/orders">
+              <Orders />
+            </PrivateRoute>
 
-          <PrivateRoute path="/admin">
-            <Admin />
-          </PrivateRoute>
-        </Switch>
-      </Router>
-    </LoginContext.Provider>
+            <PrivateRoute path="/admin">
+              <Admin />
+            </PrivateRoute>
+
+            <PrivateRoute path="/checkOut/:bookId"></PrivateRoute>
+          </Switch>
+        </Router>
+      </LoginContext.Provider>
+    </div>
   );
 }
-
-//git remote add origin https://github.com/Porgramming-Hero-web-course/full-stack-client-sabbirquince.git
 
 export default App;

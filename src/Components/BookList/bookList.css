@@ -27,7 +27,7 @@
 }
 
 .list {
-    background-color: lightblue;
+    background-color: #f1f3f8;
     display: flex;
     justify-content: space-between;
     align-items: center;

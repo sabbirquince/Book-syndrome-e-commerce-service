@@ -6,6 +6,7 @@ import BookCard from "../Card/BookCard";
 
 const Home = () => {
   const [books, setBooks] = useState([]);
+  console.log(books);
 
   useEffect(() => {
     axios
@@ -22,7 +23,7 @@ const Home = () => {
     <div className="container mt-3">
       <div className="row">
         {books.map((book) => (
-          <div className="col-lg-4 mb-4">
+          <div key={book._id} className="col-lg-4 mb-4 ">
             <BookCard book={book} />
           </div>
         ))}

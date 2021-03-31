@@ -5,15 +5,32 @@
     width: 50%;
     margin: 0 auto;
     border-radius: 7px;
+    padding: 1.5rem 0;
 }
 
-.book-form input {
+.book-form input:not(:last-child) {
     width: 75%;
     display: block;
     padding: .35rem 1.35rem;
-    margin: 1rem 0;
-    border: .5px solid lightgray;
-    border-radius: 5px;
+    margin: .65rem 0;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: lightgreen;
+}
+
+.book-form input[type="submit"] {
+    width: 75%;
+    display: block;
+    padding: .35rem 1.35rem;
+    margin: .65rem 0;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+
+.book-form input:focus {
+    border: none;
+    outline: none;
+    border: 1px solid transparent;
 }
 
 .book-form span {
@@ -24,4 +41,13 @@
 .myCardImg {
     height: 10rem;
     object-fit: cover;
+}
+
+.btn-disabled {
+    cursor: auto;
+    width: 75%;
+    padding: .5rem;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 20px;
+    color: lightgray;
 }

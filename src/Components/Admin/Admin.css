@@ -4,8 +4,8 @@
 }
 
 .left {
-    flex: 0 0 22.5%;
-    background-color: lightgreen;
+    flex: 0 0 20%;
+    background-color: #eaffd0;
 }
 
 .left h4 {

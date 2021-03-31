@@ -6,7 +6,7 @@ const BookCard = (props) => {
   const { imgURL, book, author, price } = props.book;
 
   return (
-    <Card className="bg-light book-card">
+    <Card className="bg-light book-card shadow">
       <Card.Img className="book-img" variant="top" src={imgURL} />
       <Card.Body>
         <Card.Title>{book}</Card.Title>

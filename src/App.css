@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.root {
+  background-color: #eaffd0;
+}
+
 a:hover {
   text-decoration: none !important;
 }

@@ -43,13 +43,13 @@ const AddBook = () => {
       .then((res) => res.json())
       .then((data) => {
         setBookSave(data);
-        setTimeout(() => window.location.reload(), 1500);
+        // setTimeout(() => window.location.reload(), 1500);
       });
   };
 
   return (
     <div className="addBook">
-      <h1 className="bg-white text-center p-4">Add a book</h1>
+      <h1 className="bg-white text-center p-3">Add a book</h1>
 
       <form
         className="book-form bg-white shadow-sm"
@@ -82,16 +82,19 @@ const AddBook = () => {
         )}
 
         {imgURL ? (
-          <input className="btn btn-success" type="submit" value="Save Book" />
+          <input
+            className="btn btn-success py-2"
+            type="submit"
+            value="Save Book"
+          />
         ) : (
-          <p className="text-danger">
-            Once you fill the required fields, <br /> you're allowed to save the
-            book.
-          </p>
+          <p className="btn-disabled mt-2 text-center">Save Book</p>
         )}
 
         {bookSave && (
-          <p className="text-success">Book is saved successfully!</p>
+          <p className="text-success">
+            Book is saved successfully, try adding another!
+          </p>
         )}
       </form>
     </div>

@@ -33,7 +33,7 @@ const Manage = () => {
 
         <div className="list-details">
           {booklists.map((singleBook) => (
-            <BookList singleBook={singleBook} />
+            <BookList key={singleBook._id} singleBook={singleBook} />
           ))}
         </div>
       </section>
