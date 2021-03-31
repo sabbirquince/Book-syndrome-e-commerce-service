@@ -1,0 +1,36 @@
+.book-list {
+    transition: all 1s;
+}
+
+.book-list small {
+    flex: 1;
+    font-weight: bold;
+}
+
+.book-list small:nth-child(3) {
+    text-align: center;
+}
+
+.book-list small:nth-child(2) {
+    padding: 0 4rem 0 2rem;
+}
+
+.book-list small:last-child {
+    text-align: end;
+    font-size: 1.15rem;
+}
+
+.deleteIcon {
+    cursor: pointer;
+    width: 15%;
+    height: 2rem;
+}
+
+.list {
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3.5rem;
+    border-radius: 6px;
+}

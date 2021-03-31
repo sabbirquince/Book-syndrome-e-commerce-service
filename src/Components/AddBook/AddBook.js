@@ -33,7 +33,7 @@ const AddBook = () => {
   const onSubmit = (data) => {
     const bookInfo = { ...data, imgURL };
 
-    fetch("http://localhost:4022/addBook", {
+    fetch("https://young-lowlands-07161.herokuapp.com/addBook", {
       method: "POST",
       headers: {
         "content-type": "application/json",

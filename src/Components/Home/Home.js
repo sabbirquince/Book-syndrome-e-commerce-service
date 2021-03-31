@@ -9,7 +9,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4022/books")
+      .get("https://young-lowlands-07161.herokuapp.com/books")
       .then((response) => {
         setBooks(response.data);
       })

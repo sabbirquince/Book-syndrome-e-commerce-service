@@ -13,15 +13,15 @@ const Admin = () => {
         <h2 className="py-4">Admin Panel</h2>
 
         <div className="admin-options">
-          <div className="bg-danger p-3">
-            <Link to={`${url}/manage`}>Manage Books</Link>
-          </div>
-          <div className="bg-danger p-3">
-            <Link to={`${url}/addBook`}>Add Book</Link>
-          </div>
-          <div className="bg-danger p-3">
-            <Link to={`${url}/editBook`}>Edit Book</Link>
-          </div>
+          <Link to={`${url}/manage`}>
+            <div className="bg-danger p-3">Manage Books</div>
+          </Link>
+          <Link to={`${url}/addBook`}>
+            <div className="bg-danger p-3">Add Book</div>
+          </Link>
+          <Link to={`${url}/editBook`}>
+            <div className="bg-danger p-3">Edit Book</div>
+          </Link>
         </div>
       </section>
 
