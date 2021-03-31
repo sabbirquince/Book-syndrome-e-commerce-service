@@ -21,7 +21,7 @@ const Manage = () => {
 
   return (
     <div>
-      <h3 className="px-5 py-3 bg-white mb-3">Manage books</h3>
+      <h4 className="px-5 py-3 bg-white mb-3">Manage books</h4>
 
       <section className="lists bg-white">
         <div className="list-header mb-2 text-dark">

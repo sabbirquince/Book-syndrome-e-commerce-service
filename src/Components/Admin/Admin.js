@@ -3,24 +3,32 @@ import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
 import AddBook from "../AddBook/AddBook";
 import Manage from "../Manage/Manage";
 import "./Admin.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStream, faPlus, faEdit } from "@fortawesome/free-solid-svg-icons";
 
 const Admin = () => {
   let { path, url } = useRouteMatch();
 
   return (
     <div className="admin">
-      <section className="left bg-success text-center">
-        <h2 className="py-4">Admin Panel</h2>
+      <section className="left">
+        <h4 className="py-3 mb-5">Admin Panel</h4>
 
         <div className="admin-options">
           <Link to={`${url}/manage`}>
-            <div className="bg-danger p-3">Manage Books</div>
+            <div className=" text-dark p-3 pl-5">
+              <FontAwesomeIcon icon={faStream} /> Manage Books
+            </div>
           </Link>
           <Link to={`${url}/addBook`}>
-            <div className="bg-danger p-3">Add Book</div>
+            <div className=" text-dark p-3 pl-5">
+              <FontAwesomeIcon icon={faPlus} /> Add Book
+            </div>
           </Link>
           <Link to={`${url}/editBook`}>
-            <div className="bg-danger p-3">Edit Book</div>
+            <div className=" text-dark p-3 pl-5">
+              <FontAwesomeIcon icon={faEdit} /> Edit Book
+            </div>
           </Link>
         </div>
       </section>

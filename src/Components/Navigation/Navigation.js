@@ -6,23 +6,25 @@ const Navigation = () => {
   return (
     <div>
       <Navbar className="px-5 py-3" bg="light" expand="lg">
-        <Navbar.Brand href="/">Book Syndrome</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <h3>Book Syndrome</h3>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Link className="px-3 py-2" to="/home">
+          <Nav className="ml-auto ">
+            <Link className="px-3 py-2 text-secondary" to="/home">
               Home
             </Link>
-            <Link className="px-3 py-2" to="/orders">
+            <Link className="px-3 py-2 text-secondary" to="/orders">
               Orders
             </Link>
-            <Link className="px-3 py-2" to="/admin">
+            <Link className="px-3 py-2 text-secondary" to="/admin">
               Admin
             </Link>
-            <Link className="px-3 py-2" to="/deals">
+            <Link className="px-3 py-2 text-secondary" to="/deals">
               Deals
             </Link>
-            <Link className="px-3 py-2" to="/login">
+            <Link className="px-3 py-2 text-secondary" to="/login">
               Login
             </Link>
           </Nav>
