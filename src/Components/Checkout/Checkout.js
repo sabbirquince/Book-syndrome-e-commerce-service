@@ -24,7 +24,7 @@ const Checkout = () => {
 
   const handleCheckout = () => {
     const { email } = loggedIn;
-    const date = new Date();
+    const date = new Date().toDateString();
     const placedOrder = { email, book, author, price, date, imgURL };
 
     fetch("https://young-lowlands-07161.herokuapp.com/placedOrder", {
@@ -37,7 +37,6 @@ const Checkout = () => {
       .then((res) => res.json())
       .then((data) => {
         setUploaded(data);
-        setTimeout(() => setUploaded(false), 8000);
       });
   };
 

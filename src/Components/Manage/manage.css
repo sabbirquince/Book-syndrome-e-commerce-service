@@ -38,3 +38,29 @@
 .spinner-manage {
     height: 50vh;
 }
+
+@media only screen and (max-width: 800px) {
+    .list-header {
+        flex-direction: column;
+        line-height: 2;
+        padding: .5rem;
+    }
+
+    .list-header p:last-child {
+        text-align: left;
+    }
+
+    .list-header p:nth-child(2) {
+        margin-left: 0;
+    }
+
+    .list-header p:nth-child(3) {
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .spinner-manage {
+        height: 20vh;
+    }
+
+}

@@ -7,7 +7,6 @@
     width: 30%;
     margin: 0 auto;
     display: flex;
-    /* border: 1px solid gray; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -26,4 +25,21 @@
 
 .my-btn:hover {
     background-color: #61e4f3;
+}
+
+@media only screen and (max-width:992px) {
+
+    .login-box {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width:615px) {
+    .login-page {
+        padding-top: 1.5rem;
+    }
+
+    .login-box {
+        width: 90%;
+    }
 }

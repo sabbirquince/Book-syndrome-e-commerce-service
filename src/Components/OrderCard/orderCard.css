@@ -20,6 +20,30 @@
 }
 
 .order-img {
-    /* width: 5%; */
     height: 5rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .order-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .order-card div:nth-child(2) {
+        line-height: .5;
+    }
+
+    .order-card div {
+        flex: 1;
+        padding: .35rem;
+        line-height: .5;
+    }
+
+    .order-card div:nth-child(odd) {
+        flex: 1;
+    }
+
+    .card-last {
+        text-align: left;
+    }
 }

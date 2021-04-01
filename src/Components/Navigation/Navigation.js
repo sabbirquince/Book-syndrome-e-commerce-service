@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <div className="px-5 navigation">
-      <Navbar className="px-5 py-3 " expand="lg">
+    <div className="px-md-5 navigation">
+      <Navbar className="px-lg-5 py-3 " expand="lg">
         <Navbar.Brand href="/">
           <h3 className="text-dark brand">Book Syndrome</h3>
         </Navbar.Brand>

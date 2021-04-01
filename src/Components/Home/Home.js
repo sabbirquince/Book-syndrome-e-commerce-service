@@ -29,7 +29,7 @@ const Home = () => {
       ) : (
         <div className="row">
           {books?.map((book) => (
-            <div key={book._id} className="col-lg-4 mb-4 ">
+            <div key={book._id} className="col-lg-4 col-md-6 mb-4 ">
               <BookCard book={book} />
             </div>
           ))}

@@ -20,7 +20,9 @@ const OrderCard = (props) => {
         <small>Qty: 1 </small>
       </div>
 
-      <div className="card-last">Placed: {date}</div>
+      <div className="card-last pt-3">
+        Placed: <bold>{date}</bold>
+      </div>
     </div>
   );
 };

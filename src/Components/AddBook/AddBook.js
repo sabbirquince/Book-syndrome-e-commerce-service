@@ -5,7 +5,7 @@ import axios from "axios";
 import { useState } from "react";
 
 const AddBook = () => {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit, errors } = useForm();
 
   const [bookSave, setBookSave] = useState(false);
 
@@ -49,35 +49,55 @@ const AddBook = () => {
 
   return (
     <div className="addBook">
-      <h1 className="bg-white text-center p-3">Add a book</h1>
+      <h3 className="bg-white text-dark">Add a book</h3>
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <section className="book-form bg-white shadow-sm">
           <div className="form-top">
-            <input
-              name="book"
-              placeholder="Book name"
-              ref={register({ required: true })}
-            />
-            {errors.book && <span>This field is required</span>}
+            <div className="field-box">
+              <input
+                name="book"
+                placeholder="Book name"
+                ref={register({ required: true })}
+              />
+              {errors.book && (
+                <span className="d-block text-dark pl-3">
+                  This field is required
+                </span>
+              )}
+            </div>
 
-            <input
-              name="author"
-              placeholder="Author name"
-              ref={register({ required: true })}
-            />
-            {errors.author && <span>This field is required</span>}
+            <div className="field-box">
+              <input
+                name="author"
+                placeholder="Author name"
+                ref={register({ required: true })}
+              />
+              {errors.author && (
+                <span className="d-block text-dark pl-3">
+                  This field is required
+                </span>
+              )}
+            </div>
           </div>
 
           <div className="form-bottom">
-            <input
-              name="price"
-              placeholder="Add Price"
-              ref={register({ required: true })}
-            />
-            {errors.price && <span>This field is required</span>}
+            <div className="field-box">
+              <input
+                name="price"
+                placeholder="Add Price"
+                ref={register({ required: true })}
+              />
+              {errors.price && (
+                <span className="d-block text-dark pl-3">
+                  This field is required
+                </span>
+              )}
+            </div>
 
-            <input type="file" name="image" onChange={handleImgUpload} />
+            <div className="field-box">
+              <input type="file" name="image" onChange={handleImgUpload} />
+            </div>
           </div>
 
           {loading && (

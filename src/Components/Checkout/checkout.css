@@ -32,16 +32,25 @@
     border-bottom: .5px solid rgb(235, 235, 235);
 }
 
-/* .my-checkout-card div:last-child {
-    background-color: #e4fbff;
-} */
-
 .checkout-btn {
     width: 74%;
     margin: 0 auto;
     text-align: end;
 }
 
-/* .checkout-btn button {
-    background-color: #4a47a3;
-} */
+@media only screen and (max-width: 800px) {
+    .my-checkout-card {
+        width: 95%;
+    }
+
+    .checkout h3 {
+        padding: 1.25rem;
+    }
+
+    .checkout-btn {
+        width: 93%;
+        margin: 0 auto;
+        text-align: end;
+    }
+
+}

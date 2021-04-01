@@ -12,22 +12,25 @@ const Admin = () => {
   return (
     <div className="admin">
       <section className="left text-light">
-        <h4 className="py-3 mb-3">Admin Panel</h4>
+        <h4 className="py-4 mb-2">Admin Panel</h4>
 
         <div className="admin-options">
           <Link to={`${url}/manage`}>
             <div className=" p-3 pl-5">
-              <FontAwesomeIcon icon={faStream} /> Manage Books
+              <FontAwesomeIcon icon={faStream} />{" "}
+              <span className="px-3">Manage Books</span>
             </div>
           </Link>
           <Link to={`${url}/addBook`}>
             <div className=" p-3 pl-5">
-              <FontAwesomeIcon icon={faPlus} /> Add Book
+              <FontAwesomeIcon icon={faPlus} />{" "}
+              <span className="px-3">Add Book</span>
             </div>
           </Link>
           <Link to={`${url}/editBook`}>
             <div className=" p-3 pl-5">
-              <FontAwesomeIcon icon={faEdit} /> Edit Book
+              <FontAwesomeIcon icon={faEdit} />{" "}
+              <span className="px-3">Edit Book</span>
             </div>
           </Link>
         </div>

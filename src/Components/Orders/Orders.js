@@ -25,7 +25,7 @@ const Orders = () => {
 
   return (
     <div className="orders">
-      <h3 className="p-3">Your orders</h3>
+      <h3 className="p-3 text-dark">Your orders</h3>
       {!myOrders ? (
         <div className="my-spinner spinner-order">
           <Spinner animation="grow" className="p-4" variant="info" />

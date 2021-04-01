@@ -23,7 +23,7 @@
 .deleteIcon {
     cursor: pointer;
     width: 15%;
-    height: 2rem;
+    height: 2.2rem;
 }
 
 .list {
@@ -33,4 +33,34 @@
     align-items: center;
     padding: 1rem 3.5rem;
     border-radius: 6px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .deleteIcon {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .list {
+        flex-direction: column;
+        padding: .75rem 0;
+        line-height: 2.2;
+    }
+
+    .book-list small:nth-child(3) {
+        text-align: left;
+    }
+
+    .book-list small:nth-child(2) {
+        padding: 0;
+    }
+
+    .book-list small:last-child {
+        text-align: left;
+    }
+
 }

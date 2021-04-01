@@ -22,9 +22,11 @@ const BookList = (props) => {
   };
 
   return (
-    <div className="list mb-2 book-list">
+    <div className="list mb-2 book-list shadow-sm">
       <small className="text-dark">{book}</small>
-      <small className="text-dark">{author}</small>
+      <small className="text-secondary" style={{ fontWeight: "400" }}>
+        {author}
+      </small>
       <small className="text-dark">${price}</small>
       <small className="text-dark">
         <img
