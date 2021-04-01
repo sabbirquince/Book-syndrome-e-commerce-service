@@ -21,6 +21,7 @@ a:hover {
 
 .nav-option {
   font-family: 'Josefin Sans', sans-serif;
+  padding-right: 6rem;
 }
 
 a {
@@ -37,8 +38,43 @@ h4 {
   font-weight: 600;
 }
 
+.navigation h3 {
+  padding-left: 7.25rem;
+}
+
 .my-spinner {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.login-btn {
+  background-color: #f4d160;
+  border-radius: 5px;
+  transition: all .2s;
+}
+
+.login-btn:hover {
+  background-color: #ffee93;
+}
+
+.user-img {
+  height: 2.5rem;
+  border-radius: 50px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navigation h3 {
+    padding-left: 2.5rem;
+  }
+
+  .nav-option {
+    padding-right: .75rem;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .navigation h3 {
+    padding-left: .5rem;
+  }
 }

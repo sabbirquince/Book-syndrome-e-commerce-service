@@ -17,7 +17,6 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((user) => {
-        console.log(user);
         setLoggedIn(user);
         history.replace(from);
       })

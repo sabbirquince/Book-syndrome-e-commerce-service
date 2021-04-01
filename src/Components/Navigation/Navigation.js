@@ -1,31 +1,51 @@
 import React from "react";
+import { useContext } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { LoginContext } from "../../App";
 
 const Navigation = () => {
+  const [loggedIn, setLoggedIn] = useContext(LoginContext);
+
+  const handleLogOut = () => {
+    setLoggedIn(false);
+  };
+
   return (
     <div className="px-md-5 navigation">
-      <Navbar className="px-lg-5 py-3 " expand="lg">
+      <Navbar className="px-lg-5 py-3" expand="lg">
         <Navbar.Brand href="/">
-          <h3 className="text-dark brand">Book Syndrome</h3>
+          <h3 className=" text-dark brand">Book Syndrome</h3>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto nav-option">
-            <Link className="px-3 py-2 text-secondary text-dark" to="/home">
+            <Link className="px-3 py-2 text-dark" to="/home">
               Home
             </Link>
-            <Link className="px-3 py-2 text-secondary text-dark" to="/orders">
+            <Link className="px-3 py-2 text-dark" to="/orders">
               Orders
             </Link>
-            <Link className="px-3 py-2 text-secondary text-dark" to="/admin">
+            <Link className="px-3 py-2 text-dark" to="/admin">
               Admin
             </Link>
-            <Link className="px-3 py-2 text-secondary text-dark" to="/deals">
-              Deals
-            </Link>
-            <Link className="px-3 py-2 text-secondary text-dark" to="/login">
-              Login
+
+            {!loggedIn ? (
+              <Link className="px-3 py-2 text-dark login-btn" to="/login">
+                Login
+              </Link>
+            ) : (
+              <Link
+                onClick={handleLogOut}
+                className="px-3 py-2 text-dark login-btn"
+                to="/home"
+              >
+                Log out
+              </Link>
+            )}
+
+            <Link to="/home" className="px-3 mt-3 mt-md-0 text-dark">
+              <img className="user-img" src={loggedIn.photoURL} alt="" />
             </Link>
           </Nav>
         </Navbar.Collapse>
