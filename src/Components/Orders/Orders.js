@@ -39,6 +39,12 @@ const Orders = () => {
           ))}
         </ol>
       )}
+
+      {myOrders?.length === 0 && (
+        <p className="text-dark text-center p-3">
+          You have no order in your orders list.
+        </p>
+      )}
     </div>
   );
 };

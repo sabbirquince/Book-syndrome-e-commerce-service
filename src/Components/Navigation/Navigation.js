@@ -9,6 +9,7 @@ const Navigation = () => {
 
   const handleLogOut = () => {
     setLoggedIn(false);
+    window.location.reload();
   };
 
   return (
