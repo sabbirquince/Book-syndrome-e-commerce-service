@@ -2,11 +2,12 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Spinner } from "react-bootstrap";
 import BookCard from "../Card/BookCard";
+import "./home.css";
 
 const Home = () => {
-  const [books, setBooks] = useState([]);
-  console.log(books);
+  const [books, setBooks] = useState(null);
 
   useEffect(() => {
     axios
@@ -20,14 +21,20 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="container mt-3">
-      <div className="row">
-        {books.map((book) => (
-          <div key={book._id} className="col-lg-4 mb-4 ">
-            <BookCard book={book} />
-          </div>
-        ))}
-      </div>
+    <div className="container mt-3 home">
+      {!books ? (
+        <div className="my-spinner spinner-home">
+          <Spinner animation="grow" className="p-4" variant="info" />
+        </div>
+      ) : (
+        <div className="row">
+          {books?.map((book) => (
+            <div key={book._id} className="col-lg-4 mb-4 ">
+              <BookCard book={book} />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

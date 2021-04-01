@@ -2,11 +2,12 @@ import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Spinner } from "react-bootstrap";
 import BookList from "../BookList/BookList";
 import "./manage.css";
 
 const Manage = () => {
-  const [booklists, setBookLists] = useState([]);
+  const [booklists, setBookLists] = useState(null);
 
   useEffect(() => {
     axios
@@ -31,11 +32,17 @@ const Manage = () => {
           <p>Action</p>
         </div>
 
-        <div className="list-details">
-          {booklists.map((singleBook) => (
-            <BookList key={singleBook._id} singleBook={singleBook} />
-          ))}
-        </div>
+        {!booklists ? (
+          <div className="my-spinner spinner-manage">
+            <Spinner animation="grow" className="p-4" variant="info" />
+          </div>
+        ) : (
+          <div className="list-details">
+            {booklists?.map((singleBook) => (
+              <BookList key={singleBook._id} singleBook={singleBook} />
+            ))}
+          </div>
+        )}
       </section>
     </div>
   );

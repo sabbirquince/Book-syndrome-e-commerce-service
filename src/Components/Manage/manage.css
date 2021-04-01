@@ -34,3 +34,7 @@
     text-align: center;
     padding-left: 3rem;
 }
+
+.spinner-manage {
+    height: 50vh;
+}
