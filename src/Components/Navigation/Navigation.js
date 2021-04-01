@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { LoginContext } from "../../App";
+import logo from "../../icons/logo.png";
 
 const Navigation = () => {
   const [loggedIn, setLoggedIn] = useContext(LoginContext);
@@ -16,7 +17,9 @@ const Navigation = () => {
     <div className="px-md-5 navigation">
       <Navbar className="px-lg-5 py-3" expand="lg">
         <Navbar.Brand href="/">
-          <h3 className=" text-dark brand">Book Syndrome</h3>
+          <h3 className=" text-dark brand">
+            <img className="logo pr-1" src={logo} alt="" /> Book Syndrome
+          </h3>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
