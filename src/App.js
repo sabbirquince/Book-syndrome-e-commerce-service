@@ -10,6 +10,7 @@ import Login from "./Components/Login/Login";
 import Orders from "./Components/Orders/Orders";
 import Admin from "./Components/Admin/Admin";
 import Checkout from "./Components/Checkout/Checkout";
+import Footer from "./Components/Footer/Footer";
 
 export const LoginContext = createContext();
 
@@ -47,6 +48,8 @@ function App() {
               <Checkout />
             </PrivateRoute>
           </Switch>
+
+          <Footer />
         </Router>
       </LoginContext.Provider>
     </div>
