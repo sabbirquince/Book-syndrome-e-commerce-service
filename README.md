@@ -13,3 +13,5 @@
 #### 4. User/admin can login just with Google.
 
 #### 5. Application is mobile friendly as it is responsive.
+
+### Server-side host: https://young-lowlands-07161.herokuapp.com/
