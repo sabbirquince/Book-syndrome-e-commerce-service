@@ -10,12 +10,11 @@ const Navigation = () => {
 
   const handleLogOut = () => {
     setLoggedIn(false);
-    window.location.reload();
   };
 
   return (
     <div className="px-md-5 navigation">
-      <Navbar className="px-lg-5 py-3" expand="lg">
+      <Navbar className="px-lg-5 py-3 shadow-sm" expand="lg">
         <Navbar.Brand href="/">
           <h3 className=" text-dark brand">
             <img className="logo pr-1" src={logo} alt="" /> Book Syndrome

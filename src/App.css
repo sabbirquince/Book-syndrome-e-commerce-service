@@ -84,4 +84,9 @@ h4 {
   .navigation h3 {
     padding-left: .5rem;
   }
+
+  .nav-option {
+    padding-right: .75rem;
+    margin-top: 1rem;
+  }
 }

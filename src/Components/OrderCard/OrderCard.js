@@ -5,7 +5,7 @@ const OrderCard = (props) => {
   const { book, author, price, date, imgURL } = props.singleOrder;
 
   return (
-    <div className="order-card">
+    <div className="order-card shadow-sm">
       <div>
         <img className="order-img" src={imgURL} alt="" />
       </div>
