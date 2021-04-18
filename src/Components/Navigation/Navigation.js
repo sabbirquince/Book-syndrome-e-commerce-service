@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useContext } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -12,9 +12,11 @@ const Navigation = () => {
     setLoggedIn(false);
   };
 
+  const [activeClass, setActiveClass] = useState(null);
+
   return (
-    <div className="px-md-5 navigation">
-      <Navbar className="px-lg-5 py-3 shadow-sm" expand="lg">
+    <div className="px-md-5 navigation shadow-sm">
+      <Navbar className="px-lg-5 py-3 " expand="lg">
         <Navbar.Brand href="/">
           <h3 className=" text-dark brand">
             <img className="logo pr-1" src={logo} alt="" /> Book Syndrome
@@ -23,13 +25,37 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto nav-option">
-            <Link className="px-3 py-2 text-dark" to="/home">
+            <Link
+              onClick={() => setActiveClass(0)}
+              className={
+                activeClass === 0
+                  ? "px-3 py-2 text-dark active-tab"
+                  : "px-3 py-2 text-dark"
+              }
+              to="/home"
+            >
               Home
             </Link>
-            <Link className="px-3 py-2 text-dark" to="/orders">
+            <Link
+              onClick={() => setActiveClass(1)}
+              className={
+                activeClass === 1
+                  ? "px-3 py-2 text-dark active-tab"
+                  : "px-3 py-2 text-dark"
+              }
+              to="/orders"
+            >
               Orders
             </Link>
-            <Link className="px-3 py-2 text-dark" to="/admin">
+            <Link
+              onClick={() => setActiveClass(2)}
+              className={
+                activeClass === 2
+                  ? "px-3 py-2 text-dark active-tab"
+                  : "px-3 py-2 text-dark"
+              }
+              to="/admin"
+            >
               Admin
             </Link>
 

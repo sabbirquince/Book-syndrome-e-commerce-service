@@ -42,6 +42,11 @@ h4 {
   font-weight: 600;
 }
 
+.active-tab {
+  background-color: #5bd8a886;
+  border-radius: 5px;
+}
+
 .navigation h3 {
   padding-left: 7.25rem;
   display: flex;
